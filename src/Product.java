@@ -51,8 +51,12 @@ class Motherboard extends Product {
         this.bios = bios;
     }
 
-    public void loadProgram(String programName) {
-        System.out.println("Program " + programName + " is now loading...");
+    public void loadProgram(String programName) throws InterruptedException {
+        System.out.println("Program "+programName+" is now loading");
+        for (int i=0; i<40; i++){
+            System.out.print(".");
+            Thread.sleep(80);
+        }
     }
 }
 
